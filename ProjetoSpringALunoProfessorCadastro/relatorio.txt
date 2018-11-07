@@ -1,0 +1,9 @@
+5/11 inicio do projeto
+
+13:30 - 16:00 - Adaptando projeto anterior para o Spring
+16:00 - 17:30 - Criacao interface de cadastro aluno no jsp
+
+6/11
+
+13:30 - 14:40 - Criacao interface de cadastro aluno no jsp
+14:40 - 17:30 - criando script para validacao cpf, data, limpar todos os dados e novo UI de alerta(sweet alert)
