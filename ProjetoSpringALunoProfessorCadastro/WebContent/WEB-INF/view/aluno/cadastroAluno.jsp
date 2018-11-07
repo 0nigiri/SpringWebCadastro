@@ -11,6 +11,9 @@
 
 <title>Lista Aluno</title>
 
+<link rel="stylesheet" type="text/css"
+	href="resources/css/cadastroAluno.css">
+
 <script type="text/javascript" src="resources/js/jquery.js"></script>
 <script type="text/javascript" src="resources/js/alunoVerificaLimpa.js"></script>
 <script type="text/javascript" src="resources/js/sweetalert.min.js"></script>
@@ -21,7 +24,7 @@
 <body>
 
 	<!-- DADOS PESSOAIS-->
-<form id = "cadastro">
+<form id = "cadastro" class="simple-form">
 	<fieldset>
 		<legend>
 			<h3>Cadastrar novo aluno</h3>
@@ -34,7 +37,7 @@
 
 				<td><label for="nome">Nome: </label></td>
 
-				<td align="left"><input type="text" name="nome"></td>
+				<td align="left"><input type="text" name="nome" required  minlength="1" maxlength="40" size="40" required></td>
 
 
 			</tr>
@@ -44,18 +47,18 @@
 			<tr>
 				<td><label>Data de Nascimento: </label></td>
 				<td align="left"><input type="date"	name="birthDate"  min="1900-01-01"
-					max="2018-12-31" /></td>
+					max="2018-12-31" required /></td>
 			</tr>
 
 			<!-- CPF -->
 
 			<tr>
 				<td><label>CPF:</label></td>
-				<td align="left"><input type="text" name="cpf" size="9"
-					maxlength="9"
-					onkeypress="return event.charCode >= 48 && event.charCode <= 57" >
-					- <input type="text" name="cpf2" size="2" maxlength="2"
-					onkeypress="return event.charCode >= 48 && event.charCode <= 57" onblur="verificadorCPF()">
+				<td align="left">
+					  <input type="text" name="cpf"  minlength="9"	maxlength="9"
+					onkeypress="return event.charCode >= 48 && event.charCode <= 57" size="9" onblur="verificadorCPF()" required>
+					- <input type="text" name="cpf2" size="2"  minlength="2" maxlength="2"
+					onkeypress="return event.charCode >= 48 && event.charCode <= 57" size="2" onblur="verificadorCPF()" required >
 				</td>
 			</tr>
 
@@ -63,11 +66,11 @@
 
 			<tr>
 				<td><label>Telefone:</label></td>
-				<td align="left"><input type="text" name="telefone" size="3"
+				<td align="left"><input type="text" name="telefone" size="3"  minlength="2"
 					maxlength="3"
-					onkeypress="return event.charCode >= 48 && event.charCode <= 57">
-					- <input type="text" name="telefone2" size="9" maxlength="9"
-					onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+					onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+					- <input type="text" name="telefone2" size="9"  minlength="8" maxlength="9" 
+					onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
 				</td>
 			</tr>
 
@@ -77,7 +80,7 @@
 
 				<td><label for="email">Email: </label></td>
 
-				<td align="left"><input type="text" name="email"></td>
+				<td align="left"><input type="email" name="email" required></td>
 
 
 			</tr>
@@ -88,7 +91,7 @@
 
 				<td><label for="email">Endereço: </label></td>
 
-				<td align="left"><input type="text" name="adress"></td>
+				<td align="left"><input type="text" name="adress" required></td>
 
 
 			</tr>
@@ -97,8 +100,8 @@
 
 			<tr>
 				<td><label for="sexo">Sexo:</label></td>
-				<td align="left"><select name="sexo">
-						<option value="null"></option>
+				<td align="left"><select name="sexo" id="sexo" required>
+						<option value="">Sexo:</option>
 						<option value="male">Masculino</option>
 						<option value="female">Feminino</option>
 						<option value="other">LGBTTQQFAGPBDSM+</option>
@@ -111,8 +114,8 @@
 
 			<tr>
 				<td><label for="curso">Curso:</label></td>
-				<td align="left"><select name="curso">
-						<option value="null">Cursos disponíveis:</option>
+				<td align="left"><select name="curso" id="curso"required>
+						<option value="">Cursos disponíveis:</option>
 						<option value="javaWeb">Java WEB</option>
 						<option value="cobol">Cobol</option>
 						<option value="net">.NET</option>
@@ -126,9 +129,9 @@
 
 			<tr>
 				<td align="left">
-					<input type="button" value="Adicionar" id="verificador" onclick="verificadorCadastro()" >
+					<input  type="button" value="Adicionar" id="verificador" onclick="verificadorCadastro()">
 					
-					 <input type="button" value="Limpar"  id="limpar" onclick="limparCampos()">
+					 <input  type="button" value="Limpar"  id="limpar" onclick="limparCampos()">
 				</td>
 			</tr>
 

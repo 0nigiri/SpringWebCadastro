@@ -20,8 +20,8 @@ function limparCampos(){
 	        $("[name='telefone2']").val(""); 
 	        $("[name='email']").val(""); 
 	        $("[name='adress']").val(""); 
-	        $("[name='sexo'] option:selected").text("")
-	        $("[name='curso'] option:selected").text("Cursos disponíveis:"); 
+	        $("[name='sexo']").val(""); 
+	        $("[name='curso']").val("");  
 		  } else {
 		    swal("Your imaginary file is safe!");
 		  }
@@ -75,6 +75,9 @@ function verificadorCPF(){
 	    		  icon: "success",
 	    		  button: "Aww yiss!",
 	    		});
+	    	
+	    	
+	    	
 	    } else if (valido == 0 ){
 	    	swal({
 	    		  title: "CPF invalido!",
@@ -98,7 +101,7 @@ function verificadorCadastro(){
 	var count = 0;
 	count = $("[name='cpf']").val().length + $("[name='cpf2']").val().length;
 	var dataValida = moment($("input[name='birthDate']").val());
-
+	alert($("[name='sexo'] option:selected").val());
 	
 	if(			   $("[name='nome']").val() == null
 			||     dataValida.isValid() == false
@@ -107,7 +110,7 @@ function verificadorCadastro(){
 			||      $("[name='telefone2']").val() == null
 			||      $("[name='email']").val() == null
 			||      $("[name='adress']").val() == null	
-			||      $("[name='sexo'] option:selected").text() == null
+			||      $("[name='sexo'] option:selected").text() == "Sexo:"
 			||     $("[name='curso'] option:selected").text() == "Cursos disponíveis:"){
 		
 		swal({

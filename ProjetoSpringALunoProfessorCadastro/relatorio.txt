@@ -7,3 +7,8 @@
 
 13:30 - 14:40 - Criacao interface de cadastro aluno no jsp
 14:40 - 17:30 - criando script para validacao cpf, data, limpar todos os dados e novo UI de alerta(sweet alert)
+
+7/11
+
+13:30 - 15:30 - arrumando o github
+15:30 - 17:30 - interface de campos invalidos ou vasio
