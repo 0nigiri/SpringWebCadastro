@@ -12,3 +12,8 @@
 
 13:30 - 15:30 - arrumando o github
 15:30 - 17:30 - interface de campos invalidos ou vasio
+
+8/11
+
+13:30 - 15:10 - pagina lista de aluno
+15:10 - 17:40 - cadastro de aluno para o banco de dados

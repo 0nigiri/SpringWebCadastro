@@ -24,7 +24,7 @@
 <body>
 
 	<!-- DADOS PESSOAIS-->
-<form id = "cadastro" class="simple-form">
+<form action="adicionarAluno" id = "cadastro" class="simple-form">
 	<fieldset>
 		<legend>
 			<h3>Cadastrar novo aluno</h3>
@@ -55,10 +55,13 @@
 			<tr>
 				<td><label>CPF:</label></td>
 				<td align="left">
-					  <input type="text" name="cpf"  minlength="9"	maxlength="9"
+					  <input type="text" name="cpf1"  minlength="9"	maxlength="9"
 					onkeypress="return event.charCode >= 48 && event.charCode <= 57" size="9" onblur="verificadorCPF()" required>
-					- <input type="text" name="cpf2" size="2"  minlength="2" maxlength="2"
+					- 
+					<input type="text" name="cpf2" size="2"  minlength="2" maxlength="2"
 					onkeypress="return event.charCode >= 48 && event.charCode <= 57" size="2" onblur="verificadorCPF()" required >
+					
+					<input type="hidden" name="cpf">
 				</td>
 			</tr>
 
@@ -66,11 +69,14 @@
 
 			<tr>
 				<td><label>Telefone:</label></td>
-				<td align="left"><input type="text" name="telefone" size="3"  minlength="2"
-					maxlength="3"
+				<td align="left"><input type="text" name="telefone1" size="2"  minlength="2"
+					maxlength="2"
 					onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
-					- <input type="text" name="telefone2" size="9"  minlength="8" maxlength="9" 
+					- 
+					<input type="text" name="telefone2" size="9"  minlength="8" maxlength="9" 
 					onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+					
+					<input type="hidden" name="telefone">
 				</td>
 			</tr>
 

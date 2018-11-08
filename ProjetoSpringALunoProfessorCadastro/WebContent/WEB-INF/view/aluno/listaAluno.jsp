@@ -30,15 +30,14 @@
 		style="width: 100%">
 		<thead>
 			<tr class="w3-light-grey">
-				<th style="width: 5%">Matricula</th>
+				<th style="width: 20%">Matricula</th>
 				<th style="width: 30%">Nome</th>
-				<th style="width: 30">Finalizado?</th>
-				<th style="width: 15%">Data de finalização</th>
-				<th style="width: 5%"></th>
-				<th style="width: 5%"></th>
+				<th style="width: 30">Curso</th>
+				<th style="width: 10%"></th>
+				<th style="width: 10%"></th>
 			</tr>
 		</thead>
-		<c:forEach items="${tarefas}" var="tarefa">
+		<c:forEach items="${aluno}" var="aluno">
 			<tr>
 				<td>${aluno.matricula}</td>
 				<td>${aluno.nome}</td>

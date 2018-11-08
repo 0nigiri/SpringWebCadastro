@@ -1,10 +1,10 @@
 package br.com.fti.dao;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,9 +41,12 @@ public class AlunoDAO {
 
 			stmt = conn.prepareStatement(sql.toString());
 
+			java.sql.Date sqlDate = java.sql.Date.valueOf(aluno.getDataNascimento());
+			
+			
 			stmt.setString(1, aluno.getNome());
 			stmt.setString(2, aluno.getCpf());
-			stmt.setDate  (3, Date.valueOf(aluno.getDataNascimento()));
+			stmt.setDate  (3, sqlDate);
 			stmt.setString(4, aluno.getEndereco());
 			stmt.setString(5, aluno.getTelefone());
 			stmt.setString(6, aluno.geteMail());
@@ -97,7 +100,8 @@ public class AlunoDAO {
 				aluno.setMatricula(rs.getInt("matricula_aluno"));
 				aluno.setNome(rs.getString("nome_aluno"));
 				aluno.setCpf(rs.getString("cpf_aluno"));
-				aluno.setDataNascimento(rs.getDate("data_de_nascimento_aluno").toLocalDate());
+				
+				aluno.setDataNascimento(rs.getString("data_de_nascimento_aluno"));
 				aluno.setEndereco(rs.getString("endereco_aluno"));
 				aluno.setTelefone(rs.getString("telefone_aluno"));
 				aluno.seteMail(rs.getString("email_aluno"));
@@ -144,7 +148,7 @@ public class AlunoDAO {
 				aluno.setMatricula(rs.getInt("matricula_aluno"));
 				aluno.setNome(rs.getString("nome_aluno"));
 				aluno.setCpf(rs.getString("cpf_aluno"));
-				aluno.setDataNascimento(rs.getDate("data_de_nascimento_aluno").toLocalDate());
+				aluno.setDataNascimento(rs.getString("data_de_nascimento_aluno"));
 				aluno.setEndereco(rs.getString("endereco_aluno"));
 				aluno.setTelefone(rs.getString("telefone_aluno"));
 				aluno.seteMail(rs.getString("email_aluno"));
@@ -236,10 +240,12 @@ public class AlunoDAO {
 			
 			stmt = conn.prepareStatement(sql.toString());
 			
+			java.sql.Date sqlDate = java.sql.Date.valueOf(aluno.getDataNascimento());
+			
 			//stmt.setInt(1, professor.getId());
 			stmt.setString(1, aluno.getNome());
 			stmt.setString(2, aluno.getCpf());
-			stmt.setDate  (3, Date.valueOf(aluno.getDataNascimento()));
+			stmt.setDate  (3, sqlDate);
 			stmt.setString(4, aluno.getEndereco());
 			stmt.setString(5, aluno.getTelefone());
 			stmt.setString(6, aluno.geteMail());

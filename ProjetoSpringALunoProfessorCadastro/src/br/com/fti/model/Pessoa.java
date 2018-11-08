@@ -5,7 +5,7 @@ public class Pessoa {
 	
 	public String nome;
 	public String cpf;
-	public LocalDate dataNascimento;
+	public String dataNascimento;
 	public String endereco;
 	public String sexo;
 	public String telefone;
@@ -30,11 +30,11 @@ public class Pessoa {
 	}
 
 	
-	public LocalDate getDataNascimento() {
+	public String getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(LocalDate dataNascimento) {
+	public void setDataNascimento(String dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 
