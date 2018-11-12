@@ -17,3 +17,8 @@
 
 13:30 - 15:10 - pagina lista de aluno
 15:10 - 17:40 - cadastro de aluno para o banco de dados
+
+12/11
+
+13:30 - 16:00 - criacao validacao dados em java
+16:00 - 1730 - pagina de edicao

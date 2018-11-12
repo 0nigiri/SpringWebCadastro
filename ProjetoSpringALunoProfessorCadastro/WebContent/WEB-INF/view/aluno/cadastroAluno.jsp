@@ -116,11 +116,11 @@
 				</select></td>
 			</tr>
 
-			<!-- Curso-->
+			<!-- Curso-->     
 0
 			<tr>
 				<td><label for="curso">Curso:</label></td>
-				<td align="left"><select name="curso" id="curso" required  value="Cobol">
+				<td align="left"><select name="curso" id="curso" required  value="${aluno.curso}">
 						<option value="">Cursos disponíveis:</option>
 						<option value="Java WEB">Java WEB</option>
 						<option value="Cobol">Cobol</option>
