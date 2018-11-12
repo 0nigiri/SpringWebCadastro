@@ -13,7 +13,7 @@ function limparCampos(){
 		      icon: "success",
 		    });
 	        $("[name='nome']").val(""); 
-	        $("[name='birthDate']").val(""); 
+	        $("[name='dataNascimento']").val(""); 
 	        $("[name='cpf1']").val(""); 
 	        $("[name='cpf2']").val(""); 
 	        $("[name='telefone1']").val(""); 
@@ -123,6 +123,7 @@ function verificadorCadastro(){
 			  icon: "success",
 			  button: "Aww yiss!",
 			}).then(function(){ 
+
 				var tel =  $("[name='telefone1']").val() +   $("[name='telefone2']").val();
 				$("[name='telefone']").val(tel); 
 				 var cpf =  $("[name='cpf1']").val() +   $("[name='cpf2']").val();

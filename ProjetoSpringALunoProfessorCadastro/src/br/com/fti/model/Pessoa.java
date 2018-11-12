@@ -1,16 +1,60 @@
 package br.com.fti.model;
-import java.time.LocalDate;
-import java.util.Date;
+
 public class Pessoa {
 	
 	public String nome;
 	public String cpf;
+	public String cpf1;
+	public String cpf2;
 	public String dataNascimento;
 	public String endereco;
 	public String sexo;
 	public String telefone;
+	public String telefone1;
+	public String telefone2;
 	public String eMail;
 	
+
+
+
+	public String getCpf1() {
+		
+		cpf1 = this.getCpf().substring(0, 9);
+		return cpf1;
+	}
+
+	public void setCpf1(String cpf1) {
+		this.cpf1 = cpf1;
+	}
+
+	public String getCpf2() {
+		cpf2 = this.getCpf().substring(9, 11);
+		return cpf2;
+	}
+
+	public void setCpf2(String cpf2) {
+		this.cpf2 = cpf2;
+	}
+	
+	
+	
+	public String getTelefone1() {
+		telefone1 = this.getTelefone().substring(0, 2);
+		return telefone1;
+	}
+	
+	public void setTelefone1(String telefone1) {
+		this.telefone1 = telefone1;
+	}
+
+	public String getTelefone2() {
+		telefone2 = this.getTelefone().substring(2,11);
+		return telefone2;
+	}
+
+	public void setTelefone2(String telefone2) {
+		this.telefone2 = telefone2;
+	}
 
 
 	public String getNome() {

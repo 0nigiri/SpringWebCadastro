@@ -41,12 +41,10 @@ public class AlunoDAO {
 
 			stmt = conn.prepareStatement(sql.toString());
 
-			java.sql.Date sqlDate = java.sql.Date.valueOf(aluno.getDataNascimento());
-			
 			
 			stmt.setString(1, aluno.getNome());
 			stmt.setString(2, aluno.getCpf());
-			stmt.setDate  (3, sqlDate);
+			stmt.setDate  (3, java.sql.Date.valueOf(aluno.getDataNascimento()));
 			stmt.setString(4, aluno.getEndereco());
 			stmt.setString(5, aluno.getTelefone());
 			stmt.setString(6, aluno.geteMail());
@@ -240,12 +238,13 @@ public class AlunoDAO {
 			
 			stmt = conn.prepareStatement(sql.toString());
 			
-			java.sql.Date sqlDate = java.sql.Date.valueOf(aluno.getDataNascimento());
+	
+			
 			
 			//stmt.setInt(1, professor.getId());
 			stmt.setString(1, aluno.getNome());
 			stmt.setString(2, aluno.getCpf());
-			stmt.setDate  (3, sqlDate);
+			stmt.setDate  (3, java.sql.Date.valueOf(aluno.dataNascimento));
 			stmt.setString(4, aluno.getEndereco());
 			stmt.setString(5, aluno.getTelefone());
 			stmt.setString(6, aluno.geteMail());

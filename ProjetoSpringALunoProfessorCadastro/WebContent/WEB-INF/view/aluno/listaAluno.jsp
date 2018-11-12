@@ -23,7 +23,7 @@
 
 
 
-	<a href="novaAluno">Cadastrar novo aluno</a>
+	<a href="cadastroAluno">Cadastrar novo aluno</a>
 	<br />
 	<br />
 	<table class="w3-table-all w3-hoverable w3-centered"
@@ -41,7 +41,7 @@
 			<tr>
 				<td>${aluno.matricula}</td>
 				<td>${aluno.nome}</td>
-				<td ${aluno.curso}></td>
+				<td> ${aluno.curso}</td>
 				<td><a href="deletarAluno?id=${aluno.matricula}">Remover</a></td>
 				<td><a href="editarAluno?id=${aluno.matricula}">Editar</a></td>
 			</tr>

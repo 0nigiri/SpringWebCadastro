@@ -7,15 +7,15 @@ import java.time.format.ResolverStyle;
 
 public class ConferirData {
     public static boolean isDate(String strDate) {
-    	  String dateFormat = "dd/MM/uuuu";
+    	  String dateFormat = "uuuu-MM-dd";
     	  
 
     	    DateTimeFormatter dateTimeFormatter = DateTimeFormatter
     	    .ofPattern(dateFormat)
     	    .withResolverStyle(ResolverStyle.STRICT);
     	    
-    	    LocalDate dataHoje = LocalDate.parse("01/01/2018", dateTimeFormatter);
-    	    LocalDate dataMinimo= LocalDate.parse("01/01/1900", dateTimeFormatter);
+    	    LocalDate dataHoje = LocalDate.parse("2018-12-31", dateTimeFormatter);
+    	    LocalDate dataMinimo= LocalDate.parse("1900-01-01", dateTimeFormatter);
     	    try {
     	        LocalDate date = LocalDate.parse(strDate, dateTimeFormatter);
     	        if(date.isAfter(dataMinimo)&&date.isBefore(dataHoje)) {
