@@ -50,7 +50,7 @@ public class AlunoDAO {
 			stmt.setString(6, aluno.geteMail());
 			stmt.setString(7, aluno.getSexo());
 			stmt.setString(8, aluno.getCurso());
-
+			
 			stmt.execute();
 			conn.commit();
 		} catch (SQLException e) {

@@ -22,3 +22,9 @@
 
 13:30 - 16:00 - criacao validacao dados em java
 16:00 - 1730 - pagina de edicao
+
+13/11
+
+13:30 - 15:40 - edicao e deletar aluno 
+15:40 - 16:20 - controller funcionario
+16:20 - 17:30 - cadastro funcionario jsp

@@ -1,3 +1,12 @@
+function moedaDecimal(element){
+	
+	if ($("[name='"+element+"']").val() > 0){
+		$("[name='"+element+"']").val(parseFloat($("[name='"+element+"']").val()).toFixed(2));
+	}
+}
+
+
+
 function limparCampos(){
 	
 	swal({
@@ -44,7 +53,7 @@ function cancelaEdicao(){
 		      icon: "success",
 		    }).then(function(){ 
 
-		    	   window.location.href="listaAluno";
+		    	   window.location.href="listaFuncionario";
 		
 					});
 		 

@@ -48,8 +48,14 @@ public class Pessoa {
 	}
 
 	public String getTelefone2() {
-		telefone2 = this.getTelefone().substring(2,11);
+		if(this.getTelefone().length() == 10) {
+		telefone2 = this.getTelefone().substring(2,10);
 		return telefone2;
+		} else  {
+			telefone2 = this.getTelefone().substring(2,11);
+			return telefone2;
+		}
+		
 	}
 
 	public void setTelefone2(String telefone2) {

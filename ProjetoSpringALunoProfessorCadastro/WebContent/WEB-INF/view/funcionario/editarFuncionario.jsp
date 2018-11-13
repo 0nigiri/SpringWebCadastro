@@ -9,11 +9,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
-<title>Cadastro Aluno</title>
+<title>Editar Aluno</title>
 
 <link rel="stylesheet" type="text/css"
 	href="resources/css/validator.css">
-	
+
 <script type="text/javascript" src="resources/js/jquery.js"></script>
 <script type="text/javascript" src="resources/js/alunoVerificaLimpa.js"></script>
 <script type="text/javascript" src="resources/js/sweetalert.min.js"></script>
@@ -24,12 +24,23 @@
 <body>
 
 	<!-- DADOS PESSOAIS-->
-<form action="adicionarAluno" id = "cadastro" class="simple-form">
+<form action="finalizarEdicao" id = "editar" class="simple-form">
 	<fieldset>
 		<legend>
-			<h3>Cadastrar novo aluno</h3>
+			<h3>Editar novo</h3>
 		</legend>
 		<table cellspacing="10">
+		
+			<!-- Matricula-->
+
+			<tr>
+
+				<td><label for="matricula">Matricula: </label></td>
+
+				<td align="left"><input type="text" name="matricula" size="10" readonly value="${aluno.matricula}" ></td>
+
+
+			</tr>
 
 			<!-- Nome-->
 
@@ -135,9 +146,9 @@
 
 			<tr>
 				<td align="left">
-					<input  type="button" value="Adicionar" id="verificador" onclick="verificadorCadastro()">
+					<input  type="button" value="Editar" id="verificador" onclick="verificadorEditar()">
 					
-					 <input  type="button" value="Limpar"  id="limpar" onclick="limparCampos()">
+					 <input  type="button" value="Cancelar"  id="limpar" onclick="cancelaEdicao()">
 				</td>
 			</tr>
 
@@ -155,7 +166,6 @@ $( document ).ready(function() {
     console.log( "ready!" );
     $("[name='sexo']").val("${aluno.sexo}"); 
     $("[name='curso']").val("${aluno.curso}");  
-    $("[name='nome']").focus();
 });
 	
 </script>

@@ -1,12 +1,11 @@
 package br.com.fti.ferramentas;
 
 import br.com.fti.model.Aluno;
-import br.com.fti.ferramentas.ConferirCpf;
-import br.com.fti.ferramentas.ConferirData;
+import br.com.fti.model.Funcionario;
 
 public class ValidadorDeDados {
 	
-	public boolean validadorDeDados(Aluno aluno) {
+	public boolean validadorDeDadosAluno(Aluno aluno) {
 		
 		if(		aluno.getNome().equals(null)			||	aluno.getNome().equals("")
 			||	aluno.getCpf().equals(null)				||	aluno.getCpf().equals("")	|| ConferirCpf.isCPF(aluno.getCpf()) == false
@@ -16,6 +15,21 @@ public class ValidadorDeDados {
 			||	aluno.getEndereco()		.equals(null)	|| 	aluno.getEndereco().equals("")
 			||	aluno.getSexo().equals(null) 			||	aluno.getSexo().equals("")
 			||	aluno.getCurso().equals(null)			||  aluno.getCurso().equals("")) {
+			
+			return false;
+			
+		} else {
+			
+			return true;
+			
+			
+		}
+		
+	}
+	
+public boolean validadorDeDadosFuncionario(Funcionario funcionario) {
+		
+		if(		funcionario.getNome().equals(null)			||	funcionario.getNome().equals("")) {
 			
 			return false;
 			
