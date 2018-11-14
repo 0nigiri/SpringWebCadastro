@@ -157,9 +157,9 @@
 
 
 				<tr>
-					<td><label for="Cargo">Cargo:</label></td>
-					<td align="left"><select name="Cargo" id="Cargo" required
-						value="${funcionario.Cargo}">
+					<td><label for="cargo">Cargo:</label></td>
+					<td align="left"><select name="cargo" id="Cargo" required
+						value="${funcionario.cargo}" onchange="seProfessor()">
 							<option value="">Cargos:</option>
 							<option value="Professor">Professor</option>
 							<option value="Analista">Analista</option>
@@ -171,7 +171,35 @@
 
 					</select></td>
 				</tr>
+				
 
+			<!-- Diciplina-->     
+
+			<tr>
+				<td><label id="disciplina" for="disciplina" hidden>Disciplina:</label></td>
+				<td align="left"><select required name="disciplina" id="disciplina"  value="${aluno.disciplina}" hidden>
+						<option value=""selected disabled>Disciplina disponíveis:</option>
+						<option value="Java WEB">Java WEB</option>
+						<option value="Cobol">Cobol</option>
+						<option value=".NET">.NET</option>
+						<option value="Redes">Redes</option>
+						<option value="Python">Python</option>
+
+				</select></td>
+			</tr>
+
+						<!-- Filhos-->     
+
+					<!-- Salario-->     
+
+			<tr>
+				<td><label for="filho">Quantos filhos(as):</label></td>
+				<td align="left">
+					<input name="salario" type="number" id="moeda" min="0" max="10"  required onblur="moedaDecimal('salario')" size="10" />
+				</td>
+			</tr>
+			
+			
 
 				<!-- Botoes -->
 
@@ -196,7 +224,8 @@
 $( document ).ready(function() {
     console.log( "ready!" );
     $("[name='sexo']").val("${funcionario.sexo}"); 
-    $("[name='curso']").val("${aluno.curso}");  
+    $("[name='cargo']").val("${funcionario.cargo}");  
+    $("[name='disciplina']").val("${funcionario.disciplina}");  
 });
 	
 </script>

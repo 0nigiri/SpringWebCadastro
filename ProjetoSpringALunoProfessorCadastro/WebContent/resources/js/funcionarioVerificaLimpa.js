@@ -5,7 +5,15 @@ function moedaDecimal(element){
 	}
 }
 
-
+function seProfessor(){
+	
+	if($("[name='cargo']").val() == "Professor"){ 
+		$(this.disciplina).show();
+	} else {
+		$(this.disciplina).hide();
+		$("[name='disciplina']").val("");
+	}
+}
 
 function limparCampos(){
 	
