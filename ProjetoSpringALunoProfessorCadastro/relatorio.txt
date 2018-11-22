@@ -31,3 +31,8 @@
 
 14/11
 13:30 - 15:00 - cadastro funcionario jsp(salario,vales,cargos e disciplina)
+
+22/11 - 
+
+13:30 - 16:30 - cadastro funcionario jsp(quantidade filhos, nome e data nascimento)
+16:30 - 16:30 - controller funcionario e funcionarioDAO

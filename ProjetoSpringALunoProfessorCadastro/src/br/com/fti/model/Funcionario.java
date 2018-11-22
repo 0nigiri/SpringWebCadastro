@@ -1,6 +1,6 @@
 package br.com.fti.model;
 
-import java.util.Date;
+import java.util.ArrayList;
 
 public class Funcionario extends Pessoa {
 	public String cargo;
@@ -9,15 +9,22 @@ public class Funcionario extends Pessoa {
 	public String valeAlimentacao;
 	public String valeRefeicao;
 	public String valeTransporte;
-	public String nomeFilho;
-	public String filhoDataNascimento;
 	public String disciplina;
+	public ArrayList<FilhoFuncionario> filhos;
 
 
  
 
 
 
+
+	public ArrayList<FilhoFuncionario> getFilhos() {
+		return filhos;
+	}
+
+	public void setFilhos(ArrayList<FilhoFuncionario> filhos) {
+		this.filhos = filhos;
+	}
 
 	public int getCodigo() {
 		return codigo;
@@ -65,22 +72,6 @@ public class Funcionario extends Pessoa {
 
 	public void setValeTransporte(String valeTransporte) {
 		this.valeTransporte = valeTransporte;
-	}
-
-	public String getNomeFilho() {
-		return nomeFilho;
-	}
-
-	public void setNomeFilho(String nomeFilho) {
-		this.nomeFilho = nomeFilho;
-	}
-
-	public String getFilhoDataNascimento() {
-		return filhoDataNascimento;
-	}
-
-	public void setFilhoDataNascimento(String filhoDataNascimento) {
-		this.filhoDataNascimento = filhoDataNascimento;
 	}
 
 	

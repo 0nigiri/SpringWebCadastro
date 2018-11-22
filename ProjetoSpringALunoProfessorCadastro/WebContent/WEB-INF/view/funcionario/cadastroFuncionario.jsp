@@ -29,7 +29,7 @@
 		<legend>
 			<h3>Cadastrar novo funcionario</h3>
 		</legend>
-		<table cellspacing="10">
+		<table cellspacing="10" align="left">
 
 			<!-- Nome-->
 
@@ -47,7 +47,7 @@
 			<tr>
 				<td><label>Data de Nascimento: </label></td>
 				<td align="left"><input type="date"	name="dataNascimento"  min="1900-01-01"
-					max="2018-12-31" required  /></td>
+					max="2018-12-31" required  value="${funcionario.dataNascimento}"/></td>
 			</tr>
 
 			<!-- CPF -->
@@ -56,10 +56,10 @@
 				<td><label>CPF:</label></td>
 				<td align="left">
 					  <input type="text" name="cpf1"  minlength="9"	maxlength="9"
-					onkeypress="return event.charCode >= 48 && event.charCode <= 57" size="9" onblur="verificadorCPF()" required >
+					onkeypress="return event.charCode >= 48 && event.charCode <= 57" size="9" onblur="verificadorCPF()" required value="${funcionario.cpf1}">
 					- 
 					<input type="text" name="cpf2" size="2"  minlength="2" maxlength="2"
-					onkeypress="return event.charCode >= 48 && event.charCode <= 57" size="2" onblur="verificadorCPF()" required >
+					onkeypress="return event.charCode >= 48 && event.charCode <= 57" size="2" onblur="verificadorCPF()" required value="${funcionario.cpf2}">
 					
 					<input type="hidden" name="cpf">
 				</td>
@@ -71,10 +71,10 @@
 				<td><label>Telefone:</label></td>
 				<td align="left"><input type="text" name="telefone1" size="2"  minlength="2"
 					maxlength="2"
-					onkeypress="return event.charCode >= 48 && event.charCode <= 57" required  >
+					onkeypress="return event.charCode >= 48 && event.charCode <= 57" required  value="${funcionario.telefone1}">
 					- 
 					<input type="text" name="telefone2" size="9"  minlength="8" maxlength="9" 
-					onkeypress="return event.charCode >= 48 && event.charCode <= 57" required  >
+					onkeypress="return event.charCode >= 48 && event.charCode <= 57" required  value="${funcionario.telefone2}">
 					
 					<input type="hidden" name="telefone">
 				</td>
@@ -86,7 +86,7 @@
 
 				<td><label for="eMail">Email: </label></td>
 
-				<td align="left"><input type="email" name="eMail" required ></td>
+				<td align="left"><input type="email" name="eMail" required value="${funcionario.eMail}"></td>
 
 
 			</tr>
@@ -97,7 +97,7 @@
 
 				<td><label for="endereco">Endereço: </label></td>
 
-				<td align="left"><input type="text" name="endereco" required ></td>
+				<td align="left"><input type="text" name="endereco" required value="${funcionario.endereco}" ></td>
 
 
 			</tr>
@@ -106,7 +106,7 @@
 
 			<tr>
 				<td><label for="sexo">Sexo:</label></td>
-				<td align="left"><select  selected="male" name="sexo" id="sexo" required>
+				<td align="left"><select  selected="male" name="sexo" id="sexo" required value="${funcionario.sexo}">
 						<option value="" >Sexo:</option>
 						<option value="male" >Masculino</option>
 						<option value="female">Feminino</option>
@@ -121,7 +121,7 @@
 			<tr>
 				<td><label for="salario">Salario:</label></td>
 				<td align="left">
-					<input name="salario" type="number" id="moeda" min="900" max="99999"  step="0.010" required onblur="moedaDecimal('salario')" size="10" />
+					<input name="salario" type="number" id="moeda" min="900" max="99999"  step="0.010" required onblur="moedaDecimal('salario')" size="10" value="${funcionario.salario}" />
 				</td>
 			</tr>
 			
@@ -130,7 +130,7 @@
 			<tr>
 				<td><label for="valeAlimentacao">Vale Alimentacao:</label></td>
 				<td align="left">
-					<input name="valeAlimentacao" type="number" id="moeda" min="1" max="9999"  step="0.010"  onblur="moedaDecimal('valeAlimentacao')" size="10" />
+					<input name="valeAlimentacao" type="number" id="moeda" min="1" max="9999"  step="0.010"  onblur="moedaDecimal('valeAlimentacao')" size="10" value="${funcionario.valeAlimentacao}" />
 				</td>
 			</tr>
 			
@@ -139,7 +139,7 @@
 			<tr>
 				<td><label for="valeRefeicao">Vale Refeicao:</label></td>
 				<td align="left">
-					<input name="valeRefeicao" type="number" id="moeda" min="1" max="9999"  step="0.010"  onblur="moedaDecimal('valeRefeicao')" size="10" />
+					<input name="valeRefeicao" type="number" id="moeda" min="1" max="9999"  step="0.010"  onblur="moedaDecimal('valeRefeicao')" size="10" value="${funcionario.valeRefeicao}" />
 				</td>
 			</tr>
 			
@@ -148,7 +148,7 @@
 			<tr>
 				<td><label for="valeTransporte">Vale Transporte:</label></td>
 				<td align="left">
-					<input name="valeTransporte" type="number" id="moeda" min="1" max="9999"  step="0.010"  onblur="moedaDecimal('valeTransporte')" size="10" />
+					<input name="valeTransporte" type="number" id="moeda" min="1" max="9999"  step="0.010"  onblur="moedaDecimal('valeTransporte')" size="10" value="${funcionario.valeTransporte}"/>
 				</td>
 			</tr>
 
@@ -159,7 +159,7 @@
 				<tr>
 					<td><label for="cargo">Cargo:</label></td>
 					<td align="left"><select name="cargo" id="Cargo" required
-						value="${funcionario.cargo}" onchange="seProfessor()">
+						value="${funcionario.cargo}" onchange="seProfessor()" value="${funcionario.cargo}">
 							<option value="">Cargos:</option>
 							<option value="Professor">Professor</option>
 							<option value="Analista">Analista</option>
@@ -177,7 +177,7 @@
 
 			<tr>
 				<td><label id="disciplina" for="disciplina" hidden>Disciplina:</label></td>
-				<td align="left"><select required name="disciplina" id="disciplina"  value="${aluno.disciplina}" hidden>
+				<td align="left"><select required name="disciplina" id="disciplina"  value="${funcionario.disciplina}" hidden>
 						<option value=""selected disabled>Disciplina disponíveis:</option>
 						<option value="Java WEB">Java WEB</option>
 						<option value="Cobol">Cobol</option>
@@ -188,14 +188,14 @@
 				</select></td>
 			</tr>
 
-						<!-- Filhos-->     
+			<!-- Filhos-->     
 
-					<!-- Salario-->     
+   
 
 			<tr>
 				<td><label for="filho">Quantos filhos(as):</label></td>
 				<td align="left">
-					<input name="salario" type="number" id="moeda" min="0" max="10"  required onblur="moedaDecimal('salario')" size="10" />
+					<input name="filho" type="number" id="moeda" min="0" max="10"  required onchange="sefilhos()" size="10" />
 				</td>
 			</tr>
 			
@@ -213,7 +213,26 @@
 
 
 		</table>
+		
+		<!-- filhos -->
 	</fieldset>
+
+		<fieldset id="cadastroFilhos" hidden>
+			<legend>
+				<h3>Cadastrar filhos(as)</h3>
+			</legend>
+			
+			
+				<div id="table-gen">
+					<table id="resultTable" cellspacing="10" align="right">
+						
+					
+					</table>
+				</div>
+
+
+
+		</fieldset>
 
 
 	</form>

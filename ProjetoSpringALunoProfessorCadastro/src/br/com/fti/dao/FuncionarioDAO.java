@@ -36,14 +36,27 @@ public class FuncionarioDAO {
 			
 			StringBuffer sql = new StringBuffer();
 			
-			sql.append("INSERT INTO aluno( nome_aluno, cpf_aluno, data_de_nascimento_aluno, endereco_aluno, telefone_aluno, email_aluno, sexo_aluno, curso_aluno) ");
-			sql.append("VALUES(?,?,?,?,?,?,?,?)");
+			sql.append("INSERT INTO funcionario codigo_funcionario, " + 
+					
+					"data_nascimento_funcionario, " + 
+					"cpf_funcionario, " + 
+					"telefone_funcionario, " + 
+					"email_funcionario, " + 
+					"endereco_funcionario, " + 
+					"sexo_funcionario, " + 
+					"salario_funcionario, " + 
+					"alimentacao_funcionario, " + 
+					"refeicao_funcionario, " + 
+					"transporte_funcionario, " + 
+					"cargo_funcionario, " + 
+					"disciplina_funcionario " );
+			sql.append("VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
 			stmt = conn.prepareStatement(sql.toString());
 
 			stmt.setString(1, funcionario.getNome());
 			stmt.setString(2, funcionario.getCpf());
-			stmt.setDate  (3, Date.valueOf(funcionario.getDataNascimento()));
+			stmt.setDate  (3, java.sql.Date.valueOf(funcionario.getDataNascimento()));
 			stmt.setString(4, funcionario.getEndereco());
 			stmt.setString(5, funcionario.getTelefone());
 			stmt.setString(6, funcionario.geteMail());
@@ -97,7 +110,7 @@ public class FuncionarioDAO {
 				funcionario.setCodigo(rs.getInt("matricula_aluno"));
 				funcionario.setNome(rs.getString("nome_aluno"));
 				funcionario.setCpf(rs.getString("cpf_aluno"));
-				funcionario.setDataNascimento(rs.getDate("data_de_nascimento_aluno").toLocalDate());
+				funcionario.setDataNascimento(rs.getString("data_de_nascimento_funcionario"));
 				funcionario.setEndereco(rs.getString("endereco_aluno"));
 				funcionario.setTelefone(rs.getString("telefone_aluno"));
 				funcionario.seteMail(rs.getString("email_aluno"));
@@ -144,7 +157,7 @@ public class FuncionarioDAO {
 				funcionario.setCodigo(rs.getInt("matricula_aluno"));
 				funcionario.setNome(rs.getString("nome_aluno"));
 				funcionario.setCpf(rs.getString("cpf_aluno"));
-				funcionario.setDataNascimento(rs.getDate("data_de_nascimento_aluno").toLocalDate());
+				funcionario.setDataNascimento(rs.getString("data_de_nascimento_funcionario"));
 				funcionario.setEndereco(rs.getString("endereco_aluno"));
 				funcionario.setTelefone(rs.getString("telefone_aluno"));
 				funcionario.seteMail(rs.getString("email_aluno"));
@@ -239,7 +252,7 @@ public class FuncionarioDAO {
 			//stmt.setInt(1, professor.getId());
 			stmt.setString(1, funcionario.getNome());
 			stmt.setString(2, funcionario.getCpf());
-			stmt.setDate  (3, Date.valueOf(funcionario.getDataNascimento()));
+			stmt.setDate  (3, java.sql.Date.valueOf(funcionario.getDataNascimento()));
 			stmt.setString(4, funcionario.getEndereco());
 			stmt.setString(5, funcionario.getTelefone());
 			stmt.setString(6, funcionario.geteMail());

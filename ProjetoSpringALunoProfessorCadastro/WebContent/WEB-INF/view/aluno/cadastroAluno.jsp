@@ -106,7 +106,7 @@
 
 			<tr>
 				<td><label for="sexo">Sexo:</label></td>
-				<td align="left"><select  selected="male" name="sexo" id="sexo" required>
+				<td align="left"><select  selected="male" name="sexo" id="sexo" required value="${aluno.sexo}">
 						<option value="" >Sexo:</option>
 						<option value="male" >Masculino</option>
 						<option value="female">Feminino</option>

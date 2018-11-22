@@ -15,6 +15,43 @@ function seProfessor(){
 	}
 }
 
+function sefilhos(){
+	if($("[name='filho']").val() > 0){ 
+		$(this.cadastroFilhos).show();
+		
+			var table = $("#resultTable");
+		    var rowNum = parseInt($("[name='filho']").val(), 10);
+		    var resultHtml = '';
+		    
+			for(var i = 0 ; i < rowNum ; i++) {
+				resultHtml += ["<tr>", 
+			 "<td>", 
+			  (i+1)+". &nbsp;",
+			 "</td>",
+			 '<td><label ">Nome: </label></td>',
+			 	'<td><input name="nomeFilho" type="text" required></td>',
+			 '	<td><label ">Data de Nascimento: </label></td>	',
+			 '	<td><input name="dataNascimentoFilho" type="date"  min="1900-01-01"	max="2018-12-31" required ></td>',
+			 '</tr>' ].join("\n");
+				
+		
+				
+				
+				
+				
+			}  
+			
+			table.html(resultHtml);
+		    return false; 
+		
+		
+		
+	} else {
+		$(this.cadastroFilhos).hide();
+	
+	}
+}
+
 function limparCampos(){
 	
 	swal({
