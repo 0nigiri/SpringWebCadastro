@@ -28,3 +28,6 @@
 13:30 - 15:40 - edicao e deletar aluno 
 15:40 - 16:20 - controller funcionario
 16:20 - 17:30 - cadastro funcionario jsp
+
+14/11
+13:30 - 15:00 - cadastro funcionario jsp(salario,vales,cargos e disciplina)
