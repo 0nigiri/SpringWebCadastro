@@ -11,7 +11,7 @@ import br.com.fti.ferramentas.ValidadorDeDados;
 import br.com.fti.model.Aluno;
  
 @Controller
-public class ControladorAluno2 {
+public class ControladorAluno {
 	
 	@RequestMapping("cadastroAluno")
 	public String form() {
